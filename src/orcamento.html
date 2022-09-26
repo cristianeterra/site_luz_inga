@@ -28,22 +28,42 @@
       </div>
     </nav>
     <div class="container">
-      <h1>Orçamento</h1>
-      <div>Solicite o seu orçamento!<br>Responderemos em até 24h.</div>
+      <h1>Solicite o seu orçamento</h1>
+      <div>Preencha o cadastro abaixo para solicitar o seu orçamento.<br>Responderemos em até 24h!</div>
       <br>
-      <form>
+      <form action="action_page.php" method="post">
         <div class="mb-3">
-          <label for="Email" class="form-label">E-mail</label>
-          <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
+          <label for="empresa" class="form-label">Nome da empresa</label>
+          <input class="form-control" name="empresa">
+        </div>
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome</label>
+          <input class="form-control" name="nome">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
           <div id="emailHelp" class="form-text">Não vamos compartilhar o seu e-mail.</div>
         </div>
         <div class="mb-3">
-          <label for="empresa" class="form-label">Nome da empresa</label>
-          <input class="form-control" id="empresa">
+          <label for="telefone" class="form-label">Telefone</label>
+          <input class="form-control" name="telefone">
         </div>
         <div class="mb-3">
-          <label for="orcamento" class="form-label">Descrição do orçamento</label>
-          <input class="form-control" id="orcamento">
+          <label for="endereco" class="form-label">Endereço</label>
+          <input class="form-control" name="endereco">
+        </div>
+        <div class="mb-3">
+          <label for="cidade" class="form-label">Cidade</label>
+          <input class="form-control" name="cidade">
+        </div>
+        <div class="mb-3">
+          <label for="descricao" class="form-label">Descrição do orçamento</label>
+          <input class="form-control" name="descricao">
+        </div>
+        <div class="mb-3">
+          <label for="lista" class="form-label">Lista de desejos de produtos</label>
+          <input class="form-control" name="lista">
         </div>
         <button type="submit" class="btn btn-primary">Solicitar</button>
       </form>

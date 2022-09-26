@@ -1,0 +1,37 @@
+version: '2'
+
+services:
+
+  mysql:
+    container_name: mysql-server-dev
+    restart: always
+    image: mysql:5.7
+    command: --init-file /data/application/init.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+    ports:
+      - '3306:3306'
+    volumes:
+      - mysqlData-dev:/var/lib/mysql
+      - ./init.sql:/data/application/init.sql
+
+  pma:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpMyAdmin-dev
+    environment:
+      PMA_HOST: 'mysql'
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+    ports:
+    - 82:80
+
+  phpwebserver:
+    container_name: php-dev
+    build: .
+    ports:
+    - 80:80
+    volumes:
+    - ./src:/var/www/html
+  
+volumes:
+  mysqlData-dev:
