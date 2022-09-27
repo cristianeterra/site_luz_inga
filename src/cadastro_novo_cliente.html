@@ -31,19 +31,20 @@
       </div>
     </nav>
     <div class="container">
-      <h1>Login</h1>
-      <div>Preencha os campos abaixo para fazer o seu login.</div>
+      <h1>Cadastro</h1>
+      <div>Preencha os campos abaixo para fazer o seu cadastro</div>
       <br>
-      <form method="post" action="fazer_login.php" id="formlogin" name="formlogin" >
-        <fieldset id="fie">
-        <legend>LOGIN</legend><br />
-        <label>NOME : </label>
-        <input type="text" name="login" id="login"  /><p></p>
-        <label>SENHA :</label>
-        <input type="password" name="senha" id="senha" /><p></p>
-        <button type="submit" value= logar class="btn btn-primary">Logar</button>
-        </fieldset>
-        </form>
+      <form action="cadastrar_novo_cliente.php" method="post">
+        <div class="mb-3">
+          <label >Nome do usuário:</label><br>
+          <input type="text" name="login"><br>
+        </div>
+        <div class="mb-3">
+          <label >Senha:</label><br>
+          <input type="password" name="senha">
+        </div>
+        <button type="submit" value= logar class="btn btn-primary">Cadastrar-se</button><p></p>
+      </form>
     </div>
     <center>
       <footer>

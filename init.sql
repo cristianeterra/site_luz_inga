@@ -21,7 +21,7 @@ CREATE TABLE `cliente` (
 
 CREATE TABLE `usuario` (
   `id` int NOT NULL AUTO_INCREMENT, 
-  `username` varchar(100), 
-  `pwd` varchar(100), 
+  `login` varchar(100), 
+  `senha` varchar(100), 
   PRIMARY KEY (`id`)
 );
