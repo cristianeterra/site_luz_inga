@@ -8,12 +8,12 @@
   <body>
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.php">
           <img src="./assets/images/logo.png" alt="logo" width="80" height="80" class="d-inline-block align-text-top">
         </a>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link active" href="index.php">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="produtos.html">Produtos</a>
@@ -24,6 +24,9 @@
           <li class="nav-item">
             <a class="nav-link" href="contato.html">Contato</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -32,15 +35,31 @@
       <h1>Promoção</h1>
       <div>Inscreva-se para receber as promoções dos nossos produtos!</div>
       <br>
-      <form>
+      <form action="cadastrar.php" method="post">
         <div class="mb-3">
-          <label for="Email" class="form-label">E-mail</label>
-          <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
+          <label for="nome" class="form-label">Nome</label>
+          <input class="form-control" name="nome">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
           <div id="emailHelp" class="form-text">Não vamos compartilhar o seu e-mail.</div>
         </div>
         <div class="mb-3">
-          <label for="empresa" class="form-label">Nome da empresa</label>
-          <input class="form-control" id="empresa">
+          <label for="telefone" class="form-label">Telefone</label>
+          <input class="form-control" name="telefone">
+        </div>
+        <div class="mb-3">
+          <label for="endereco" class="form-label">Endereço</label>
+          <input class="form-control" name="endereco">
+        </div>
+        <div class="mb-3">
+          <label for="cidade" class="form-label">Cidade</label>
+          <input class="form-control" name="cidade">
+        </div>
+        <div class="mb-3">
+          <label for="lista" class="form-label">Lista de desejos de produtos</label>
+          <input class="form-control" name="lista">
         </div>
         <button type="submit" class="btn btn-primary">Cadastrar</button>
       </form>

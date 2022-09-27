@@ -16,7 +16,7 @@
             <a class="nav-link" href="index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="produtos.html">Produtos</a>
+            <a class="nav-link" href="produtos.html">Produtos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="sobre.html">Sobre</a>
@@ -25,77 +25,30 @@
             <a class="nav-link" href="contato.html">Contato</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="login.html">Login</a>
+            <a class="nav-link active" href="login.html">Login</a>
           </li>
         </ul>
       </div>
     </nav>
-
     <div class="container">
-      <h1>Lustres</h1>
-
-      <div class="card-group">
-        <div class="card">
-          <img class="card-img-top" src="./assets/images/lustre.png">
-          <div class="card-body">
-            <h5 class="card-title">Lustre moderno de madeira</h5>
-            <p class="card-text"><small class="text-muted"></small></p>
-          </div>
+      <h1>Login</h1>
+      <div>Preencha os campos abaixo para fazer o seu login</div>
+      <br>
+      <form action="fazer_login.php" method="post">
+        <div class="mb-3">
+          <label for="username">Nome do usuário:</label><br>
+          <input type="text" name="username"><br>
         </div>
-        <div class="card">
-          <img class="card-img-top" src="./assets/images/lustre_madeira.png">
-          <div class="card-body">
-            <h5 class="card-title">Lustre moderno Led</h5>
-            <p class="card-text"><small class="text-muted"></small></p>
-          </div>
+        <div class="mb-3">
+          <label for="pwd">Senha:</label><br>
+          <input type="password" name="pwd">
         </div>
-        <div class="card">
-          <img class="card-img-top" src="./assets/images/lustre_madeira_gota.png">
-          <div class="card-body">
-            <h5 class="card-title">Lustre pendente de madeira Gota</h5>
-            <p class="card-text"><small class="text-muted"></small></p>
-          </div>
-        </div>
-      </div>
-
-
-      <br><br><br>
-      
-      <h3>Descrição</h3>
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Produto</th>
-            <th scope="col">Comprimento (cm)</th>
-            <th scope="col">Largura (cm)</th>
-            <th scope="col">Altura (cm)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Lustre moderno de madeira</th>
-            <td>200</td>
-            <td>60</td>
-            <td>80</td>
-          </tr>
-          <tr>
-            <th scope="row">Lustre moderno Led</th>
-            <td>400</td>
-            <td>100</td>
-            <td>200</td>
-          </tr>
-          <tr>
-            <th scope="row">Lustre pendente de madeira Gota</th>
-            <td>40</td>
-            <td>30</td>
-            <td>50</td>
-          </tr>
-        </tbody>
-      </table>
-
-      
+        <button type="submit" class="btn btn-primary">Logar agora</button><p></p>
+        <input type="checkbox" id="excluir" name="excluir" value="Bike">
+        <label for="vehicle1"> Desejo excluir todos os meus dados</label><br><p></p>
+        <button type="submit" class="btn btn-primary">Excluir dados</button>
+      </form>
     </div>
-
     <center>
       <footer>
         <p>Luz Ingá<br>
@@ -108,7 +61,6 @@
         <img src="./assets/images/linkedin.png" width="30" height="30" class="d-inline-block align-text-top">
         </footer>
     </center>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -1,14 +1,27 @@
 CREATE DATABASE IF NOT EXISTS luz_inga_dev;
 USE luz_inga_dev;
+CREATE TABLE `orcamento` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100),
+  `email` varchar(100),
+  `descricao` varchar(150),
+  PRIMARY KEY (id)
+);
+
 CREATE TABLE `cliente` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `empresa` varchar(100),
   `nome` varchar(100),
   `email` varchar(100),
   `telefone` varchar(100),
   `endereco` varchar(150),
   `cidade` varchar(150),
-  `descricao` text,
   `lista` varchar(150),
   PRIMARY KEY (id)
+);
+
+CREATE TABLE `usuario` (
+  `id` int NOT NULL AUTO_INCREMENT, 
+  `username` varchar(100), 
+  `pwd` varchar(100), 
+  PRIMARY KEY (`id`)
 );
