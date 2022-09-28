@@ -36,11 +36,32 @@
       <br>
       <form action="cadastrar_novo_cliente.php" method="post">
         <div class="mb-3">
-          <label >Nome do usuário:</label><br>
+          <label for="nome" class="form-label">Nome</label>
+          <input class="form-control" name="nome">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">Não vamos compartilhar o seu e-mail.</div>
+        </div>
+        <div class="mb-3">
+          <label for="telefone" class="form-label">Telefone</label>
+          <input class="form-control" name="telefone">
+        </div>
+        <div class="mb-3">
+          <label for="endereco" class="form-label">Endereço</label>
+          <input class="form-control" name="endereco">
+        </div>
+        <div class="mb-3">
+          <label for="cidade" class="form-label">Cidade</label>
+          <input class="form-control" name="cidade">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Nome do usuário:</label><br>
           <input type="text" name="login"><br>
         </div>
         <div class="mb-3">
-          <label >Senha:</label><br>
+          <label class="form-label">Senha:</label><br>
           <input type="password" name="senha">
         </div>
         <button type="submit" value= logar class="btn btn-primary">Cadastrar-se</button><p></p>

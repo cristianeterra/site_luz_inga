@@ -1,3 +1,14 @@
+<?php
+
+$conn = new mysqli('mysql', 'root', 'eusouasenha', 'luz_inga_dev');
+if($conn){
+  $sql = "SELECT `nome` FROM usuario";
+  if (mysqli_connect_errno()) {
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    exit();
+  } 
+}
+?>
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
@@ -13,10 +24,10 @@
         </a>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="index.php">Home</a>
+            <a class="nav-link" href="index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="produtos.html">Produtos</a>
+            <a class="nav-link active" href="produtos.html">Produtos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="sobre.html">Sobre</a>
@@ -32,33 +43,31 @@
     </nav>
 
     <div class="container">
-      <h1>Promoção</h1>
-      <div>Inscreva-se para receber as promoções dos nossos produtos!</div>
-      <br>
-      <form action="cadastrar.php" method="post">
-        <div class="mb-3">
-          <label for="nome" class="form-label">Nome</label>
-          <input class="form-control" name="nome">
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">E-mail</label>
-          <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">Não vamos compartilhar o seu e-mail.</div>
-        </div>
-        <div class="mb-3">
-          <label for="telefone" class="form-label">Telefone</label>
-          <input class="form-control" name="telefone">
-        </div>
-        <div class="mb-3">
-          <label for="endereco" class="form-label">Endereço</label>
-          <input class="form-control" name="endereco">
-        </div>
-        <div class="mb-3">
-          <label for="cidade" class="form-label">Cidade</label>
-          <input class="form-control" name="cidade">
-        </div>
-        <button type="submit" class="btn btn-primary">Cadastrar</button>
-      </form>
+      <h3>Lista de Usuários cadastrados</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Usuários</th>
+            <th scope="col">Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        <?php
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+          while($row = $result->fetch_assoc()) {
+            echo "<tr><th> ". $row["nome"]."</th><td>DELETE</td></tr>";
+          }
+        } else {
+          echo "0 results";
+        }
+        mysqli_close($conn);
+        ?>
+          
+        </tbody>
+      </table>
     </div>
 
     <center>
