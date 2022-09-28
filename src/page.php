@@ -9,7 +9,7 @@ então ao verificar que a session não existe a página redireciona o mesmo
 session_start();
 if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true))
 {
-  header('location:index.php');
+  header('location:page.php');
 }
 
 $conn = new mysqli('mysql', 'root', 'eusouasenha', 'luz_inga_dev');
@@ -20,6 +20,7 @@ if($conn){
     exit();
   } 
 }
+mysqli_close($conn);
 ?>
 <html lang="pt-br">
   <head>
@@ -36,10 +37,10 @@ if($conn){
         </a>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.php">Home</a>
+            <a class="nav-link active" href="index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="produtos.html">Produtos</a>
+            <a class="nav-link" href="produtos.html">Produtos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="sobre.html">Sobre</a>
@@ -50,41 +51,65 @@ if($conn){
           <li class="nav-item">
             <a class="nav-link" href="login.html">Login</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="fazer_logout.php">Logout</a>
-          </li>
         </ul>
       </div>
     </nav>
 
     <div class="container">
-      <h3>Lista de Usuários cadastrados</h3>
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Usuários</th>
-            <th scope="col">Ação</th>
-          </tr>
-        </thead>
-        <tbody>
-
-        <?php
-        $result = $conn->query($sql);
-
-        if ($result->num_rows > 0) {
-          while($row = $result->fetch_assoc()) {
-            echo "<tr><th> ". $row["nome"]."</th><td>DELETE</td></tr>";
-          }
-        } else {
-          echo "0 results";
-        }
-        mysqli_close($conn);
-        ?>
-          
-        </tbody>
-      </table>
+      <h5>Login efetuado com sucesso!</h5>
+      <div><p>Agora você pode navegar pela nossa página e adicionar produtos à sua lista de desejos!</p></div>
+      <h1>Luz Ingá</h1>
+      <div>Iluminação e decoração de ambientes com modernidade e sofisticação.</div>
+      <br><br>
+      <center>
+      <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./assets/images/1.png" alt="Los Angeles" class="d-block">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/images/2.png" alt="Chicago" class="d-block">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/images/3.png" alt="New York" class="d-block">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+      </center>
+      <br><br>
+      <div class="card">
+        <div class="card-header">
+          Fique por dentro das nossas promoções!
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">PROMOÇÃO</h5>
+          <p class="card-text">Inscreva-se para receber as promoções dos nossos produtos!</p>
+          <a href="receber_promocoes.php" class="btn btn-primary">Receber promoções</a>
+        </div>
+      </div>
+      <br>
+      <div class="card">
+        <div class="card-header">
+          Solicite o seu orçamento!
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Orçamento</h5>
+          <p class="card-text">Receba o seu orçamento em até 24h</p>
+          <a href="orcamento.html" class="btn btn-primary">Solicitar orçamento</a>
+        </div>
+      </div>
     </div>
-
     <center>
       <footer>
         <p>Luz Ingá<br>
@@ -97,7 +122,7 @@ if($conn){
         <img src="./assets/images/linkedin.png" width="30" height="30" class="d-inline-block align-text-top">
         </footer>
     </center>
-
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
 </html>

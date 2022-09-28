@@ -69,7 +69,7 @@
         <div class="card-body">
           <h5 class="card-title">PROMOÇÃO</h5>
           <p class="card-text">Inscreva-se para receber as promoções dos nossos produtos!</p>
-          <a href="promocao.html" class="btn btn-primary">Inscreva-se já!</a>
+          <a href="login.html" class="btn btn-primary">Inscreva-se já!</a>
         </div>
       </div>
       <br>
@@ -80,7 +80,7 @@
         <div class="card-body">
           <h5 class="card-title">Orçamento</h5>
           <p class="card-text">Receba o seu orçamento em até 24h</p>
-          <a href="orcamento.html" class="btn btn-primary">Solicitar orçamento</a>
+          <a href="login.html" class="btn btn-primary">Solicitar orçamento</a>
         </div>
       </div>
     </div>

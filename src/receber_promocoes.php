@@ -1,7 +1,4 @@
-<!DOCTYPE html PUBLIC
-"-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="pt-br">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Luz Ingá</title>
@@ -33,8 +30,9 @@
       </div>
     </nav>
     <div class="container">
-      <h1>Login efetuado com sucesso!</h1>
-      <div><p>Agora você pode navegar pela nossa página e adicionar produtos à sua lista de desejos!</p></div>
+      <h1>Agradecemos a sua inscrição!</h1>
+      
+      <div><p>Em breve, você receberá as nossas promoções!</p></div>
     </div>
     <center>
       <footer>
