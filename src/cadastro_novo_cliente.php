@@ -58,11 +58,11 @@
           <input class="form-control" name="cidade">
         </div>
         <div class="mb-3">
-          <label class="form-label">Nome do usuário:</label><br>
+          <label class="form-label">Nome do usuário</label><br>
           <input type="text" name="login"><br>
         </div>
         <div class="mb-3">
-          <label class="form-label">Senha:</label><br>
+          <label class="form-label">Senha</label><br>
           <input type="password" name="senha">
         </div>
         <button type="submit" value= logar class="btn btn-primary">Cadastrar-se</button><p></p>

@@ -2,8 +2,13 @@ CREATE DATABASE IF NOT EXISTS luz_inga_dev;
 USE luz_inga_dev;
 CREATE TABLE `orcamento` (
   `id` int NOT NULL AUTO_INCREMENT,
+  `id_usuario` int,
+  `id_produto` int,
   `descricao` varchar(150),
-  PRIMARY KEY (id)
+  `efetivado` BOOLEAN, 
+  PRIMARY KEY (id),
+  FOREIGN KEY (id_usuario) REFERENCES usuario(id),
+	FOREIGN KEY (id_produto) REFERENCES produto(id)
 );
 
 CREATE TABLE `usuario` (
@@ -15,7 +20,7 @@ CREATE TABLE `usuario` (
   `cidade` varchar(150),
   `login` varchar (100), 
   `senha` varchar(100), 
-  `receberpromocao` BOOLEAN NOT NULL DEFAULT TRUE,
+  `receberpromocao` BOOLEAN NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`)
 );
 

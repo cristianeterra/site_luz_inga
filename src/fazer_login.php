@@ -32,4 +32,5 @@ if($conn){
     header('location:cadastro_novo_cliente.php');
   }
 }
+mysqli_close($conn);
 ?>

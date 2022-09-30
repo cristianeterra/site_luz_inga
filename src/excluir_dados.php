@@ -9,6 +9,5 @@ if ($conn->query($sql) === TRUE) {
 } else {
   echo "Error deleting record: " . $conn->error;
 }
-
-$conn->close();
+mysqli_close($conn);
 ?>

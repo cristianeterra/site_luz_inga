@@ -13,6 +13,7 @@ if ($conn->query($sql) === TRUE) {
 } else {
 echo "Error: " . $sql . "<br>" . $conn->error;
 }
+mysqli_close($conn);
 ?>
 <html lang="pt-br">
   <head>

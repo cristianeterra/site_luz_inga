@@ -24,6 +24,7 @@ if($conn){
 		$senha = $row['senha'];
 	}
 }
+mysqli_close($conn);
 ?>
 
 <html lang="pt-br">

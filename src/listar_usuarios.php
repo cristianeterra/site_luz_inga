@@ -20,6 +20,7 @@ if($conn){
     exit();
   } 
 }
+mysqli_close($conn);
 ?>
 <html lang="pt-br">
   <head>
