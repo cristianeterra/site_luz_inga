@@ -1,11 +1,4 @@
 <?php
-
-/* esse bloco de código em php verifica se existe a sessão, pois o usuário pode
- simplesmente não fazer o login e digitar na barra de endereço do seu navegador
-o caminho para a página principal do site (sistema), burlando assim a obrigação de
-fazer um login, com isso se ele não estiver feito o login não será criado a session,
-então ao verificar que a session não existe a página redireciona o mesmo
- para a index.php.*/
 session_start();
 if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true))
 {
@@ -37,7 +30,7 @@ mysqli_close($conn);
         </a>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="index.php">Home</a>
+            <a class="nav-link" href="index.php">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="produtos.html">Produtos</a>
@@ -51,13 +44,21 @@ mysqli_close($conn);
           <li class="nav-item">
             <a class="nav-link" href="login.html">Login</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="fazer_logout.php">Logout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  active" href="alterar_cadastro.html">Cadastro</a>
+          </li>
         </ul>
       </div>
     </nav>
 
     <div class="container">
+      <center>
       <h5>Login efetuado com sucesso!</h5>
-      <div><p>Agora você pode navegar pela nossa página e adicionar produtos à sua lista de desejos!</p></div>
+      <div><p>Agora você pode adicionar produtos à sua lista de desejos,<br>solicitar orçamento, e inscrever-se nas nossas promoções!</p></div>
+      </center>
       <h1>Luz Ingá</h1>
       <div>Iluminação e decoração de ambientes com modernidade e sofisticação.</div>
       <br><br>

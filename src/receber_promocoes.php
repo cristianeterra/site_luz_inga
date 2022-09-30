@@ -1,3 +1,19 @@
+<?php
+session_start();
+if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true))
+{
+  header('location:index.php');
+}
+
+$conn = new mysqli('mysql', 'root', 'eusouasenha', 'luz_inga_dev');
+if($conn){
+  $sql = "SELECT `nome` FROM usuario";
+  if (mysqli_connect_errno()) {
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    exit();
+  } 
+}
+?>
 <html lang="pt-br">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -25,6 +41,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="fazer_logout.php">Logout</a>
           </li>
         </ul>
       </div>

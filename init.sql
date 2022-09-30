@@ -23,3 +23,10 @@ CREATE TABLE `produto` (
   `nome` varchar(100), 
   PRIMARY KEY (`id`)
 );
+
+CREATE TABLE `promocao` (
+  `id` int NOT NULL AUTO_INCREMENT, 
+  `inscrito` varchar(100), 
+  PRIMARY KEY (`id`)
+);
+
