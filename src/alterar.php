@@ -10,9 +10,10 @@ $id = $_SESSION['usuario_id'];
 
 $conn = new mysqli('mysql', 'root', 'eusouasenha', 'luz_inga_dev');
 if($conn){
-  $sql = "SELECT `id`, `nome`, `email`, `telefone`, `endereco`, `cidade`, `login`, `senha` FROM `usuario` WHERE id = '$id'";
+  $sql = "SELECT `receberpromocao`, `id`, `nome`, `email`, `telefone`, `endereco`, `cidade`, `login`, `senha` FROM `usuario` WHERE id = '$id'";
   $result = $conn->query($sql);
 	while($row = $result -> fetch_assoc()){
+    $receberpromocao = $row['receberpromocao'];
 		$id = $row['id'];
 		$nome = $row['nome'];
 		$email = $row['email'];
@@ -69,6 +70,7 @@ if($conn){
       <br>
       <form action="alterar_cadastro.php" method="post">
         <input hidden="true" class="form-control" name="id" value="<?php echo $id ?>">
+        <input hidden="true" class="form-control" name="receberpromocao" value="<?php echo $receberpromocao ?>">
         <div class="mb-3">
           <label for="nome" class="form-label">Nome</label>
           <input class="form-control" name="nome" value="<?php echo $nome ?>">

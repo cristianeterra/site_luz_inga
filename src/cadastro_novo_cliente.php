@@ -35,6 +35,7 @@
       <div>Preencha os campos abaixo para fazer o seu cadastro</div>
       <br>
       <form action="cadastrar_novo_cliente.php" method="post">
+        <input hidden="true" class="form-control" name="receberpromocao" value="0">
         <div class="mb-3">
           <label for="nome" class="form-label">Nome</label>
           <input class="form-control" name="nome">

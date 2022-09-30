@@ -5,13 +5,13 @@ if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == tru
   header('location:index.php');
 }
 
+$id = $_POST["id"];
+
 $conn = new mysqli('mysql', 'root', 'eusouasenha', 'luz_inga_dev');
-if($conn){
-  $sql = "SELECT `nome` FROM usuario";
-  if (mysqli_connect_errno()) {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    exit();
-  } 
+$sql = "UPDATE `usuario` SET `receberpromocao` = '1' WHERE `id` = '$id'";
+if ($conn->query($sql) === TRUE) {
+} else {
+echo "Error: " . $sql . "<br>" . $conn->error;
 }
 ?>
 <html lang="pt-br">
@@ -28,7 +28,7 @@ if($conn){
         </a>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.php">Home</a>
+            <a class="nav-link active" href="index.php">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="produtos.html">Produtos</a>
@@ -40,17 +40,19 @@ if($conn){
             <a class="nav-link" href="contato.html">Contato</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="login.html">Login</a>
+            <a class="nav-link" href="login.html">Login</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="fazer_logout.php">Logout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="alterar.php">Cadastro</a>
           </li>
         </ul>
       </div>
     </nav>
     <div class="container">
       <h1>Agradecemos a sua inscrição!</h1>
-      
       <div><p>Em breve, você receberá as nossas promoções!</p></div>
     </div>
     <center>

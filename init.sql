@@ -15,18 +15,13 @@ CREATE TABLE `usuario` (
   `cidade` varchar(150),
   `login` varchar (100), 
   `senha` varchar(100), 
+  `receberpromocao` BOOLEAN NOT NULL DEFAULT TRUE,
   PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `produto` (
   `id` int NOT NULL AUTO_INCREMENT, 
   `nome` varchar(100), 
-  PRIMARY KEY (`id`)
-);
-
-CREATE TABLE `promocao` (
-  `id` int NOT NULL AUTO_INCREMENT, 
-  `inscrito` varchar(100), 
   PRIMARY KEY (`id`)
 );
 

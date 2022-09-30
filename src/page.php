@@ -96,7 +96,10 @@ mysqli_close($conn);
         <div class="card-body">
           <h5 class="card-title">PROMOÇÃO</h5>
           <p class="card-text">Inscreva-se para receber as promoções dos nossos produtos!</p>
-          <a href="receber_promocoes.php" class="btn btn-primary">Receber promoções</a>
+          <form action="receber_promocoes.php" method="post">
+            <input hidden="true" class="form-control" name="id" value="<?php echo $_SESSION['usuario_id'] ?>">
+            <button type="submit" class="btn btn-primary">Cadastrar-se</button><p></p>
+          </form>
         </div>
       </div>
       <br>

@@ -29,7 +29,7 @@ if($conn){
   }else{
     unset ($_SESSION['login']);
     unset ($_SESSION['senha']);
-    header('location:cadastro_novo_cliente.html');
+    header('location:cadastro_novo_cliente.php');
   }
 }
 ?>
