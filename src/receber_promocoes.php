@@ -24,12 +24,12 @@ mysqli_close($conn);
   <body>
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.php">
+        <a class="navbar-brand" href="page.php">
           <img src="./assets/images/logo.png" alt="logo" width="80" height="80" class="d-inline-block align-text-top">
         </a>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="index.php">Home</a>
+            <a class="nav-link active" href="page.php">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="produtos.html">Produtos</a>

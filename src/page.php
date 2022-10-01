@@ -110,7 +110,7 @@ mysqli_close($conn);
         <div class="card-body">
           <h5 class="card-title">Orçamento</h5>
           <p class="card-text">Receba o seu orçamento em até 24h</p>
-          <a href="orcamento.html" class="btn btn-primary">Solicitar orçamento</a>
+          <a href="orcamento_pedido.php" class="btn btn-primary">Solicitar orçamento</a>
         </div>
       </div>
     </div>
