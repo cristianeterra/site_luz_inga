@@ -24,7 +24,7 @@ if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == tru
             <a class="nav-link active" href="page.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="produtos.html">Produtos</a>
+            <a class="nav-link" href="produtos.php">Produtos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="sobre.html">Sobre</a>

@@ -40,7 +40,7 @@ mysqli_close($conn);
             <a class="nav-link" href="index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="produtos.html">Produtos</a>
+            <a class="nav-link active" href="produtos.php">Produtos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="sobre.html">Sobre</a>
